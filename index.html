@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>StyleDyRF: Zero-shot 4D Style Transfer for Dynamic Neural Radiance Fields</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link rel="icon" type="image/x-icon" href="static/images/pikachu.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">StyleDyRF: Zero-shot 4D Style Transfer for Dynamic Neural Radiance Fields</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <!-- <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Hongbin Xu</a><sup>*</sup>,</span> -->
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Hongbin Xu</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Weitao Chen</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Feng Xiao</a><sup>1</sup>,</span>
+                    <span class="author-block">
+                      <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Baigui Sun</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Wenxiong Kang</a><sup>1</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>South China University of Technology</span>
+                    <span class="author-block"><sup>2</sup>Alibaba Group</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+                  <!-- <div class="is-size-5 publication-authors">
+                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div> -->
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2403.08310.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/ToughStoneX/StyleDyRF" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2403.08310" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper motivation -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            4D style transfer aims at transferring arbitrary visual style to the synthesized novel views of a dynamic 4D scene with varying viewpoints and times. Existing efforts on 3D style transfer can effectively combine the visual features of style images and neural radiance fields (NeRF) but fail to handle the 4D dynamic scenes limited by the static scene assumption. Consequently, we aim to handle the novel challenging problem of 4D style transfer for the first time, which further requires the consistency of stylized results on dynamic objects. In this paper, we introduce StyleDyRF, a method that represents the 4D feature space by deforming a canonical feature volume and learns a linear style transformation matrix on the feature volume in a data-driven fashion. To obtain the canonical feature volume, the rays at each time step are deformed with the geometric prior of a pre-trained dynamic NeRF to render the feature map under the supervision of pre-trained visual encoders. With the content and style cues in the canonical feature volume and the style image, we can learn the style transformation matrix from their covariance matrices with lightweight neural networks. The learned style transformation matrix can reflect a direct matching of feature covariance from the content volume to the given style pattern, in analogy with the optimization of the Gram matrix in traditional 2D neural style transfer. The experimental results show that our method not only renders 4D photorealistic style transfer results in a zero-shot manner but also outperforms existing methods in terms of visual quality and consistency.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Zero-shot 4D Style Transfer</h2>
+          <img src="static/images/intro_2.png" alt="Pipeline Image" class="center">
+        <div class="content has-text-justified">
+          <p>
+            Zero-shot 4D Style Transfer. Given a casually captured video containing dynamic objects, StyleDyRF can transfer the reference
+            style to the 4D scene in a zero-shot manner. Taking one step further from the 3D multi-view consistency in style transfer, our model is
+            capable of rendering novel views with temporal consistency in 4D scene.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Rendered Results of "Balloon1" in NVIDIA Dataset</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/07.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/09.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/42.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/14.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/balloon1.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_transfer_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_transfer_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_transfer_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_transfer_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/balloon1.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_prop_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_prop_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_prop_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_prop_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video2">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/15.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/18.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/20.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/21.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/balloon1.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_transfer_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_transfer_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_transfer_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_transfer_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/balloon1.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_prop_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_prop_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_prop_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_prop_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video3">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/25.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/30.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/11.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/43.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/balloon1.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_transfer_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_transfer_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_transfer_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_transfer_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/balloon1.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_prop_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_prop_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_prop_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon1_prop_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          The 1-st row shows style images. 
+          The 2-nd row shows the rendered results of dynamic NeRF in zero-shot 4D artistic style transfer.
+          The 3-rd row shows the rendered results of dynamic NeRF in zero-shot 4D photorealistic style transfer.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Rendered Results of "Balloon2" in NVIDIA Dataset</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/07.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/09.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/42.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/14.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/balloon2.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_transfer_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_transfer_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_transfer_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_transfer_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/balloon2.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_prop_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_prop_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_prop_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_prop_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video2">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/15.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/18.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/20.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/21.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/balloon2.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_transfer_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_transfer_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_transfer_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_transfer_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/balloon2.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_prop_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_prop_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_prop_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_prop_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video3">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/25.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/30.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/11.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/43.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/balloon2.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_transfer_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_transfer_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_transfer_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_transfer_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/balloon2.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_prop_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_prop_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_prop_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/balloon2_prop_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          The 1-st row shows style images. 
+          The 2-nd row shows the rendered results of dynamic NeRF in zero-shot 4D artistic style transfer.
+          The 3-rd row shows the rendered results of dynamic NeRF in zero-shot 4D photorealistic style transfer.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Rendered Results in of "Skating" NVIDIA Dataset</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/07.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/09.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/42.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/14.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/skating.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_transfer_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_transfer_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_transfer_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_transfer_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/skating.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_prop_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_prop_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_prop_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_prop_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video2">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/15.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/18.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/20.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/21.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/skating.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_transfer_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_transfer_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_transfer_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_transfer_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/skating.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_prop_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_prop_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_prop_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_prop_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video3">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/25.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/30.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/11.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/43.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/skating.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_transfer_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_transfer_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_transfer_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_transfer_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/skating.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_prop_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_prop_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_prop_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/skating_prop_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          The 1-st row shows style images. 
+          The 2-nd row shows the rendered results of dynamic NeRF in zero-shot 4D artistic style transfer.
+          The 3-rd row shows the rendered results of dynamic NeRF in zero-shot 4D photorealistic style transfer.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Rendered Results of "Playground" in NVIDIA Dataset</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/07.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/09.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/42.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/14.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/playground.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_transfer_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_transfer_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_transfer_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_transfer_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/playground.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_prop_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_prop_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_prop_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_prop_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video2">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/15.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/18.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/20.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/21.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/playground.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_transfer_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_transfer_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_transfer_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_transfer_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/playground.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_prop_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_prop_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_prop_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_prop_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video3">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/25.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/30.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/11.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/43.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/playground.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_transfer_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_transfer_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_transfer_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_transfer_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/playground.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_prop_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_prop_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_prop_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/playground_prop_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          The 1-st row shows style images. 
+          The 2-nd row shows the rendered results of dynamic NeRF in zero-shot 4D artistic style transfer.
+          The 3-rd row shows the rendered results of dynamic NeRF in zero-shot 4D photorealistic style transfer.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Rendered Results in of "bus" in DAVIS Dataset</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/07.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/09.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/42.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/14.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/bus.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_transfer_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_transfer_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_transfer_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_transfer_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/bus.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_prop_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_prop_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_prop_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_prop_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video2">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/15.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/18.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/20.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/21.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/bus.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_transfer_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_transfer_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_transfer_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_transfer_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/bus.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_prop_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_prop_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_prop_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_prop_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video3">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/25.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/30.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/11.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/43.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/bus.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_transfer_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_transfer_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_transfer_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_transfer_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/bus.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_prop_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_prop_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_prop_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/bus_prop_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          The 1-st row shows style images. 
+          The 2-nd row shows the rendered results of dynamic NeRF in zero-shot 4D artistic style transfer.
+          The 3-rd row shows the rendered results of dynamic NeRF in zero-shot 4D photorealistic style transfer.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Rendered Results of "train" in DAVIS Dataset</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/07.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/09.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/42.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/14.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/train.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_transfer_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_transfer_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_transfer_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_transfer_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/train.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_prop_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_prop_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_prop_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_prop_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video2">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/15.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/18.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/20.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/21.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/train.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_transfer_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_transfer_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_transfer_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_transfer_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/train.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_prop_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_prop_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_prop_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_prop_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video3">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/25.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/30.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/11.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/43.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/train.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_transfer_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_transfer_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_transfer_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_transfer_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/train.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_prop_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_prop_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_prop_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/train_prop_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          The 1-st row shows style images. 
+          The 2-nd row shows the rendered results of dynamic NeRF in zero-shot 4D artistic style transfer.
+          The 3-rd row shows the rendered results of dynamic NeRF in zero-shot 4D photorealistic style transfer.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Rendered Results of "blackswan" in DAVIS Dataset</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/07.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/09.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/42.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/14.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/blackswan.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_transfer_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_transfer_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_transfer_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_transfer_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/blackswan.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_prop_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_prop_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_prop_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_prop_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video2">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/15.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/18.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/20.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/21.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/blackswan.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_transfer_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_transfer_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_transfer_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_transfer_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/blackswan.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_prop_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_prop_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_prop_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_prop_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video3">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/25.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/30.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/11.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/43.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/blackswan.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_transfer_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_transfer_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_transfer_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_transfer_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/blackswan.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_prop_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_prop_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_prop_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/blackswan_prop_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          The 1-st row shows style images. 
+          The 2-nd row shows the rendered results of dynamic NeRF in zero-shot 4D artistic style transfer.
+          The 3-rd row shows the rendered results of dynamic NeRF in zero-shot 4D photorealistic style transfer.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Rendered Results of "kite-surf" in DAVIS Dataset</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/07.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/09.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/42.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/14.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/kite_surf.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_transfer_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_transfer_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_transfer_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_transfer_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/kite_surf.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_prop_07.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_prop_09.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_prop_42.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_prop_14.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video2">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/15.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/18.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/20.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/21.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/kite_surf.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_transfer_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_transfer_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_transfer_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_transfer_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/kite_surf.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_prop_15.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_prop_18.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_prop_20.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_prop_21.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+        <div class="item item-video3">
+          <div class="video-row">
+            <img src="static/images/style_imgs/empty.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/25.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/30.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/11.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+            <img src="static/images/style_imgs/43.jpg" alt="Pipeline Image" height="240" width="240" class="center">
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/kite_surf.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_transfer_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_transfer_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_transfer_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_transfer_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+          <div class="video-row">
+            <video src="static/images/style_videos/kite_surf.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_prop_25.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_prop_30.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_prop_11.mp4" controls width="240" autoplay loop muted></video>
+            <video src="static/images/style_videos/kite_surf_prop_43.mp4" controls width="240" autoplay loop muted></video>
+          </div>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          The 1-st row shows style images. 
+          The 2-nd row shows the rendered results of dynamic NeRF in zero-shot 4D artistic style transfer.
+          The 3-rd row shows the rendered results of dynamic NeRF in zero-shot 4D photorealistic style transfer.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{xu2024styledyrf,
+        title={StyleDyRF: Zero-shot 4D Style Transfer for Dynamic Neural Radiance Fields}, 
+        author={Hongbin Xu and Weitao Chen and Feng Xiao and Baigui Sun and Wenxiong Kang},
+        year={2024},
+        eprint={2403.08310},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV}
+  }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
